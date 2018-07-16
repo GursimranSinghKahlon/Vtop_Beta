@@ -1,12 +1,13 @@
 #Recommendations#
 
+OS : Ubuntu
 Python version : 2.x
-
 Run from cmd/terminal  :   
                   "python2 driver.py"
                or "python driver.py"
                or ...
                
+ *Please do necessary changes for use in windows*       
                
  Extension Used:
  https://chrome.google.com/webstore/detail/enhancer-for-vit-vellore/hafeeaangmkbibcaahfjdmmmeappjbbp as "ensuitego.crx"
