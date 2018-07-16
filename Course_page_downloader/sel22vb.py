@@ -79,7 +79,14 @@ for course_count in range(courses_count):
         time.sleep(2)
         i+=1
 
+print("Done")
+
+'''
 #LOGOUT
 driver.find_element_by_xpath('//*[@id="page-content"]/header/nav/div/ul/li/a').click()
-time.sleep(2)
+time.sleep(5)
 driver.find_element_by_xpath('//*[@id="btnLogout"]').click()
+print('Closing')
+time.sleep(5)
+driver.quit()
+'''
