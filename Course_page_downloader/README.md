@@ -1,5 +1,5 @@
-*Recommendations*
-Python version : 2.x
+*Recommendations*\n
+Python version : 2.x\n
 Run from cmd/terminal  :   
                   "python2 driver.py"
                or "python driver.py"
