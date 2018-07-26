@@ -6,11 +6,19 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import getpass
+from sys import platform
+
+if platform == "linux" or platform == "linux2":
+    # linux
+    executable_path = 'chromedriver'
+elif platform == "win32":
+    # Windows...
+    executable_path = 'chromedriver.exe'
 
 username = str(raw_input("Enter the register no. : "))
 password = getpass.getpass('Password : ')
 
-executable_path = 'chromedriver'
+
 chrome_options = Options()
 chrome_options.add_extension('ensuitego.crx')
 
@@ -43,6 +51,8 @@ time.sleep(2)
 
 #List of courses
 courses = []
+
+#WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="courseCode"]')))
 all_options = driver.find_element_by_xpath('//*[@id="courseCode"]')
 for option in all_options.find_elements_by_tag_name('option'):
     course = option.text
@@ -53,9 +63,10 @@ courses_count = len(courses)
 
 #Iterate through each course
 for course_count in range(courses_count):
-    time.sleep(1)
+    #WebDriverWait(driver, 5).until(EC.element_to_be_clickable(By.XPATH, "//*[@id='semesterSubId']/option[text()='Fall Semester 2018-19 - VLR']"))
     driver.find_element_by_xpath("//*[@id='semesterSubId']/option[text()='Fall Semester 2018-19 - VLR']").click()
     time.sleep(2)
+    #WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='courseCode']/option[text()='{}']]/option[text()='Fall Semester 2018-19 - VLR']")))
     driver.find_element_by_xpath("//*[@id='courseCode']/option[text()='{}']".format(str(courses[course_count]))).click()
     time.sleep(3)
 
