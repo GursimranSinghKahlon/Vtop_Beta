@@ -10,7 +10,6 @@ Run from cmd/terminal (Navigate to file directory) :
               
                
  Extension Used:
- https://github.com/Presto412/CoursePage-Download-Manager
  https://chrome.google.com/webstore/detail/enhancer-for-vit-vellore/hafeeaangmkbibcaahfjdmmmeappjbbp as "ensuitego.crx"
  (Modified : "Overwrite" option for duplicate downloads)
  Driver Used:
